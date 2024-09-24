@@ -1,18 +1,17 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import Cookies from "js-cookie";
 import { useEffect } from "react";
 
 export default async function Home() {
-
-  useEffect(()=> {
-    Cookies.set('name', 'TestName')
-    Cookies.set('user', 'TestUser')
-    Cookies.set('ipAddr', '192.168.1.2')
-
-  }, [])
-
+  useEffect(() => {
+    Cookies.set("name", "TestName");
+    Cookies.set("user", "TestUser");
+    Cookies.set("ipAddr", "192.168.1.2");
+    Cookies.set("locale", 'TH')
+    Cookies.set("theme", 'light')
+  }, []);
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
